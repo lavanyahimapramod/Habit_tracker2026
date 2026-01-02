@@ -13,6 +13,10 @@
         line-height: 25px;
         margin: 2px;
         }
+     .day.done {
+        background-color: green;
+        color: white;
+                 }
     </style>
   </head>
    
@@ -35,4 +39,13 @@
       
     </div>
   </body>
+  <script>
+    const days = document.querySelectorAll('.day');
+
+    days.forEach(day => {
+        day.addEventListener('click', () => {
+            day.classList.toggle('done');
+        });
+    });
+  </script>
 </html>
